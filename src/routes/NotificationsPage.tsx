@@ -7,7 +7,7 @@ export default function NotificationsPage() {
 
     const handleSendNotification = async (e: React.FormEvent) => {
         e.preventDefault();
-        await api.post("/api/notification", { message });
+        await api.post("/notification", JSON.stringify(message));
         setMessage("");
     };
 
@@ -22,7 +22,8 @@ export default function NotificationsPage() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
-                <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+                <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-black p-2 rounded"
+                >
                     שלח התראה
                 </button>
             </form>

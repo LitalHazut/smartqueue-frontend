@@ -56,7 +56,7 @@ export default function AppointmentsPage() {
                     value={serviceType}
                     onChange={(e) => setServiceType(e.target.value)}
                 />
-                <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+                <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-black p-2 rounded">
                     הוסף תור
                 </button>
             </form>
